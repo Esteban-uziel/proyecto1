@@ -14,16 +14,6 @@ from .forms import DemandaForm
 def index(request):
     return render(request, "index.html")
 
-def busqueda_demanda(request):
-    return render(request, "busqueda_demanda.html")
-
-def buscar(request):
-    if request.GET["prd"]:
-        mensaje="aticulo buscado: %r" %request.GET["prd"]
-        
-    else:
-        mensaje="no ha introducido nada"
-    return HttpResponse(mensaje)
 
 def creardemanda(request):
     data={
