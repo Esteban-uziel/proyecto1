@@ -28,7 +28,7 @@ def creardemanda(request):
             data['form']=formulario
         data['form']=formulario
         
-    return render (request,'./creardemanda.html',data)
+    return render (request,'/templates/creardemanda.html',data)
 
 
 
@@ -37,7 +37,7 @@ def listado(request):
     data = {
         'listar':listar
     }
-    return render(request,'./list.html',data)
+    return render(request,'/templates/list.html',data)
 
 
 
@@ -53,4 +53,4 @@ def modificar_dem(request,id ):
             data["mensaje"] = "demanda modificada"
             data['form']= formulario
         data['form'] = formulario
-    return render(request,'./modificar.html',data)
+    return render(request,'./templates/modificar.html',data)
